@@ -1,0 +1,26 @@
+class Employee:
+    def __init__(self, name, age, salary):
+        self.name = name
+        self.age = age
+        self.salary = salary
+
+# Sample list of Employee objects
+employees = [
+    Employee("Alice", 30, 70000),
+    Employee("Bob", 25, 50000),
+    Employee("Charlie", 35, 80000),
+    Employee("David", 28, 60000),
+    Employee("Eve", 22, 75000)
+]
+
+# Sort by name
+employees_sorted_by_name = sorted(employees, key=lambda emp: emp.name)
+print("Sorted by name:", employees_sorted_by_name)
+
+# Sort by age
+employees_sorted_by_age = sorted(employees, key=lambda emp: emp.age)
+print("Sorted by age:", employees_sorted_by_age)
+
+# Sort by salary
+employees_sorted_by_salary = sorted(employees, key=lambda emp: emp.salary)
+print("Sorted by salary:", employees_sorted_by_salary)
