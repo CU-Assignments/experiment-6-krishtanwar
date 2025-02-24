@@ -1,0 +1,34 @@
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+# Sample list of Student objects
+students = [
+    Student("Alice", 85),
+    Student("Bob", 65),
+    Student("Charlie", 90),
+    Student("David", 70),
+    Student("Eve", 78),
+    Student("Frank", 92)
+]
+
+# Filter students scoring above 75% and sort them by marks
+filtered_sorted_students = sorted(
+    filter(lambda student: student.marks > 75, students),
+    key=lambda student: student.marks
+)
+
+# Display the names of the filtered and sorted students
+print("Students scoring above 75% sorted by marks:")
+for student in filtered_sorted_students:
+    print(student.name)
+
+
+
+The output will be like:
+Students scoring above 75% sorted by marks:
+Eve
+Alice
+Charlie
+Frank
